@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuaderno Digital · Fundamentos de Programación</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ DECORACIÓN FLOTANTE GLOBAL ============ -->
+<div class="floating-petals" aria-hidden="true">
+  <span class="petal">🌸</span><span class="petal">🦋</span><span class="petal">🌷</span>
+  <span class="petal">🦋</span><span class="petal">🌸</span><span class="petal">🌼</span>
+</div>
+
+<!-- ============ PORTADA ============ -->
+<section id="portada" class="pantalla portada activa">
+  <div class="portada-flores" aria-hidden="true">
+    <span class="flor f1">🌸</span><span class="flor f2">🌷</span><span class="flor f3">🌼</span>
+    <span class="flor f4">🌸</span><span class="flor f5">🦋</span><span class="flor f6">🦋</span>
+    <span class="flor f7">🌺</span><span class="flor f8">🌸</span>
+  </div>
+  <div class="portada-contenido">
+    <div class="logo-proyecto">📖</div>
+    <p class="eyebrow">Fundamentos de Programación</p>
+    <h1 class="titulo-principal">Mi Cuaderno<br>Académico</h1>
+    <p class="subtitulo">Un jardín de conocimientos sobre hardware, algoritmos y programación</p>
+    <p class="bienvenida">Bienvenida, soy Sandy Elisabeth Toapanta Puco. Este es mi portafolio interactivo, hecho con cariño y dedicación.</p>
+    <button class="btn-grande" onclick="mostrarSeccion('inicio')">Entrar al cuaderno ✿</button>
+  </div>
+</section>
+
+<!-- ============ MENÚ PRINCIPAL (barra fija) ============ -->
+<nav id="menu-principal" class="menu-principal">
+  <div class="menu-logo" onclick="mostrarSeccion('inicio')">📖 Mi Cuaderno</div>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <ul class="menu-lista" id="menu-lista">
+    <li><button onclick="mostrarSeccion('inicio')">🏠 Inicio</button></li>
+    <li><button onclick="mostrarSeccion('unidad1')">📘 Unidad 1</button></li>
+    <li><button onclick="mostrarSeccion('unidad2')">📗 Unidad 2</button></li>
+    <li><button onclick="mostrarSeccion('unidad3')">📕 Unidad 3</button></li>
+    <li><button onclick="mostrarSeccion('juegos')">🎮 Juegos</button></li>
+    <li><button onclick="mostrarSeccion('acerca')">ℹ Acerca de</button></li>
+  </ul>
+</nav>
+
+<main id="contenedor-principal">
+
+<!-- ============ INICIO ============ -->
+<section id="inicio" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">🏠 Inicio</h2>
+
+    <div class="tarjeta-perfil">
+      <div class="perfil-avatar">🌷</div>
+      <div class="perfil-datos">
+        <h3>Sandy Elisabeth Toapanta Puco</h3>
+        <ul class="lista-datos">
+          <li><strong>Edad:</strong> 20 años</li>
+          <li><strong>Ciudad:</strong> Latacunga</li>
+          <li><strong>Provincia:</strong> Cotopaxi</li>
+          <li><strong>País:</strong> Ecuador</li>
+          <li><strong>Universidad:</strong> Universidad Técnica de Cotopaxi</li>
+          <li><strong>Carrera:</strong> Ingeniería en Software</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tarjeta-flotante">
+      <h3>🌼 Sobre mí</h3>
+      <p>Soy una estudiante entusiasta de Ingeniería en Software, curiosa por comprender cómo funcionan las máquinas por dentro y cómo el pensamiento lógico se transforma en programas útiles. Disfruto aprender paso a paso, con paciencia y constancia, y creo firmemente que cada error es una oportunidad para crecer.</p>
+    </div>
+
+    <h3 class="titulo-sub">🎯 Objetivos académicos</h3>
+    <div class="grid-tarjetas">
+      <div class="mini-tarjeta">Culminar mi carrera con éxito</div>
+      <div class="mini-tarjeta">Aprender programación</div>
+      <div class="mini-tarjeta">Desarrollar software de calidad</div>
+      <div class="mini-tarjeta">Mejorar continuamente mis conocimientos</div>
+      <div class="mini-tarjeta">Ser una profesional responsable y ética</div>
+    </div>
+
+    <h3 class="titulo-sub">🌱 Habilidades</h3>
+    <div class="grid-tarjetas">
+      <div class="mini-tarjeta">🤝 Trabajo en equipo</div>
+      <div class="mini-tarjeta">✅ Responsabilidad</div>
+      <div class="mini-tarjeta">🗂️ Organización</div>
+      <div class="mini-tarjeta">⚡ Aprendizaje rápido</div>
+      <div class="mini-tarjeta">🧩 Resolución de problemas</div>
+      <div class="mini-tarjeta">🍲 Cocina</div>
+      <div class="mini-tarjeta">⚽ Fútbol</div>
+      <div class="mini-tarjeta">🎨 Creatividad</div>
+      <div class="mini-tarjeta">🌟 Perseverancia</div>
+    </div>
+
+    <h3 class="titulo-sub">💗 Valores personales</h3>
+    <div class="grid-tarjetas">
+      <div class="mini-tarjeta valor">Responsabilidad</div>
+      <div class="mini-tarjeta valor">Honestidad</div>
+      <div class="mini-tarjeta valor">Respeto</div>
+      <div class="mini-tarjeta valor">Empatía</div>
+      <div class="mini-tarjeta valor">Solidaridad</div>
+      <div class="mini-tarjeta valor">Disciplina</div>
+      <div class="mini-tarjeta valor">Puntualidad</div>
+      <div class="mini-tarjeta valor">Compromiso</div>
+      <div class="mini-tarjeta valor">Trabajo en equipo</div>
+      <div class="mini-tarjeta valor">Perseverancia</div>
+    </div>
+
+    <div class="frase-motivacional">
+      <span class="comilla">"</span>
+      Si no arriesgas, no ganas.
+      <span class="comilla">"</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UNIDAD 1 ============ -->
+<section id="unidad1" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">📘 Unidad 1 · Fundamentos del Hardware y la Lógica</h2>
+    <p class="parrafo-intro">Selecciona un tema para explorarlo en detalle.</p>
+    <div class="grid-temas" id="lista-unidad1"></div>
+  </div>
+</section>
+
+<!-- ============ UNIDAD 2 ============ -->
+<section id="unidad2" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">📗 Unidad 2 · Algoritmos</h2>
+    <p class="parrafo-intro">Selecciona un tema para explorarlo en detalle.</p>
+    <div class="grid-temas" id="lista-unidad2"></div>
+  </div>
+</section>
+
+<!-- ============ UNIDAD 3 ============ -->
+<section id="unidad3" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">📕 Unidad 3 · Programación en Python</h2>
+    <p class="parrafo-intro">Selecciona un tema para explorarlo en detalle.</p>
+    <div class="grid-temas" id="lista-unidad3"></div>
+  </div>
+</section>
+
+<!-- ============ VISTA DE TEMA (genérica, se llena por JS) ============ -->
+<section id="vista-tema" class="pantalla">
+  <div class="envoltorio" id="contenido-tema"></div>
+</section>
+
+<!-- ============ JUEGOS ============ -->
+<section id="juegos" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">🎮 Juegos Interactivos</h2>
+    <p class="parrafo-intro">Pon a prueba lo aprendido con estas actividades.</p>
+    <div class="grid-temas">
+      <button class="tarjeta-tema" onclick="mostrarSeccion('juego-quiz')"><span class="tema-icono">❓</span>Cuestionario</button>
+      <button class="tarjeta-tema" onclick="mostrarSeccion('juego-sopa')"><span class="tema-icono">🔤</span>Sopa de letras</button>
+      <button class="tarjeta-tema" onclick="mostrarSeccion('juego-vf')"><span class="tema-icono">✅</span>Verdadero o Falso</button>
+      <button class="tarjeta-tema" onclick="mostrarSeccion('juego-memoria')"><span class="tema-icono">🧠</span>Memoria de conceptos</button>
+    </div>
+  </div>
+</section>
+
+<!-- Cuestionario -->
+<section id="juego-quiz" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">❓ Cuestionario general</h2>
+    <div id="quiz-contenedor" class="tarjeta-flotante"></div>
+    <div class="botones-tema">
+      <button class="btn-volver" onclick="mostrarSeccion('juegos')">← Volver a Juegos</button>
+    </div>
+  </div>
+</section>
+
+<!-- Sopa de letras -->
+<section id="juego-sopa" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">🔤 Sopa de letras</h2>
+    <p class="parrafo-intro">Arrastra el mouse (o el dedo) sobre las letras para formar las palabras. Palabras encontradas: <strong><span id="sopa-contador">0</span>/<span id="sopa-total">0</span></strong></p>
+    <div class="sopa-layout">
+      <div id="sopa-tablero" class="sopa-tablero"></div>
+      <div id="sopa-palabras" class="sopa-lista-palabras"></div>
+    </div>
+    <div class="botones-tema">
+      <button class="btn-volver" onclick="reiniciarSopa()">🔄 Reiniciar</button>
+      <button class="btn-volver" onclick="mostrarSeccion('juegos')">← Volver a Juegos</button>
+    </div>
+  </div>
+</section>
+
+<!-- Verdadero o falso -->
+<section id="juego-vf" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">✅ Verdadero o Falso</h2>
+    <div id="vf-contenedor" class="tarjeta-flotante"></div>
+    <div class="botones-tema">
+      <button class="btn-volver" onclick="mostrarSeccion('juegos')">← Volver a Juegos</button>
+    </div>
+  </div>
+</section>
+
+<!-- Memoria -->
+<section id="juego-memoria" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">🧠 Memoria de conceptos</h2>
+    <p class="parrafo-intro">Encuentra cada concepto con su definición. Intentos: <strong><span id="memoria-intentos">0</span></strong> · Pares encontrados: <strong><span id="memoria-pares">0</span>/8</strong></p>
+    <div id="memoria-tablero" class="memoria-tablero"></div>
+    <div class="botones-tema">
+      <button class="btn-volver" onclick="iniciarMemoria()">🔄 Reiniciar</button>
+      <button class="btn-volver" onclick="mostrarSeccion('juegos')">← Volver a Juegos</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACERCA DEL PROYECTO ============ -->
+<section id="acerca" class="pantalla">
+  <div class="envoltorio">
+    <h2 class="titulo-seccion">ℹ Acerca del proyecto</h2>
+    <div class="tarjeta-flotante">
+      <h3>🎯 Objetivo del proyecto</h3>
+      <p>Organizar y presentar de forma visual, ordenada e interactiva los contenidos de la asignatura de Fundamentos de Programación, facilitando el estudio y repaso de los temas de las tres unidades.</p>
+    </div>
+    <div class="tarjeta-flotante">
+      <h3>🌷 Finalidad</h3>
+      <p>Convertir el estudio en una experiencia más agradable y dinámica, combinando teoría, ejemplos, ejercicios y juegos educativos en un solo espacio digital.</p>
+    </div>
+    <div class="tarjeta-flotante">
+      <h3>🎓 Información académica</h3>
+      <ul class="lista-datos">
+        <li><strong>Estudiante:</strong> Sandy Elisabeth Toapanta Puco</li>
+        <li><strong>Universidad:</strong> Universidad Técnica de Cotopaxi</li>
+        <li><strong>Carrera:</strong> Ingeniería en Software</li>
+        <li><strong>Año:</strong> 2026</li>
+      </ul>
+    </div>
+    <div class="tarjeta-flotante">
+      <h3>💐 Agradecimientos</h3>
+      <p>A mis docentes, por guiarme en este camino de aprendizaje, y a mi familia, por su apoyo constante para seguir creciendo como profesional.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
